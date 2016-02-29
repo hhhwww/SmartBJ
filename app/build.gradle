@@ -20,6 +20,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 }
 
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -27,4 +28,10 @@ dependencies {
     compile project(':SlidingMenu')
     compile 'org.xutils:xutils:3.3.16'
     compile files('libs/gson-2.2.4.jar')
+    compile project(':viewPagerLibrary')
 }
+
+
+
+
+

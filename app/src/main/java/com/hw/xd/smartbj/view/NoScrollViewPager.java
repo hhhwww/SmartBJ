@@ -17,8 +17,15 @@ public class NoScrollViewPager extends ViewPager {
         super(context, attrs);
     }
 
+    //返回false,去掉ViewPager左右滑的功能
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
+        return false;
+    }
+
+    //返回false,不去拦截子控件
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
         return false;
     }
 }

@@ -43,10 +43,10 @@ public class NewsCenterPager extends PagerBase {
 
         mMenuDatas = new ArrayList<>();
 
-        mMenuDatas.add(new NewsMenuDetailPager(mActivity));
-        mMenuDatas.add(new TopicMenuDetailPager(mActivity));
-        mMenuDatas.add(new PhotoMenuDetailPager(mActivity));
-        mMenuDatas.add(new InteractMenuDetailPager(mActivity));
+//        mMenuDatas.add(new NewsMenuDetailPager(mActivity, newsData.data.get(0).children));
+//        mMenuDatas.add(new TopicMenuDetailPager(mActivity));
+//        mMenuDatas.add(new PhotoMenuDetailPager(mActivity));
+//        mMenuDatas.add(new InteractMenuDetailPager(mActivity));
     }
 
     private void getDatasFromServer() {
@@ -69,6 +69,12 @@ public class NewsCenterPager extends PagerBase {
         Gson gson = new Gson();
         newsData = gson.fromJson(result, NewsData.class);
 
+        //调用网络请求必须用真正的后面
+        mMenuDatas.add(new NewsMenuDetailPager(mActivity, newsData.data.get(0).children));
+        mMenuDatas.add(new TopicMenuDetailPager(mActivity));
+        mMenuDatas.add(new PhotoMenuDetailPager(mActivity));
+        mMenuDatas.add(new InteractMenuDetailPager(mActivity));
+
         //传递数据
         MainAT mainAT = (MainAT) mActivity;
         LeftMenuFragment leftFragment = mainAT.getLeftFragment();
@@ -85,5 +91,7 @@ public class NewsCenterPager extends PagerBase {
 
         ArrayList<NewsData.NewsMenuData> data = newsData.data;
         tvTitleBase.setText(data.get(position).title);
+
+        mMenuDatas.get(position).initDatas();
     }
 }

@@ -29,7 +29,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <!-- 主页面-->
-        <activity android:name=".activity.MainAT"/>
+        <activity android:name=".activity.MainAT"
+            android:theme="@style/Theme.PageIndicatorDefaults"/>
     </application>
 
 </manifest>

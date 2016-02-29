@@ -3,6 +3,7 @@ package com.hw.xd.smartbj.activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Window;
 
 import com.hw.xd.smartbj.R;
 import com.hw.xd.smartbj.fragment.ContentFragment;
@@ -22,6 +23,7 @@ public class MainAT extends SlidingFragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         setBehindContentView(R.layout.sliding);
 

@@ -42,7 +42,7 @@ public class ContentFragment extends BaseFragment {
     @Override
     public void initDatas() {
 //        //第一次初始化
-//        rgGroup.check(R.id.rb_home);
+        rgGroup.check(R.id.rb_home);
 //        vpContent.setCurrentItem(0);
 
         Activity activity = (Activity) context;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_item_tab"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
+        android:padding="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_demo" />
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_item_tab"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="暗示法司法是发顺丰萨芬奥神队爱上大叔大声道奥神队顺丰萨芬奥神队爱上大叔大声道奥奥神队奥神队"
+        android:textSize="18sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tv_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_item_tab"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_item_tab"
+        android:text="2015-12-3 12:12" />
+
+</RelativeLayout>
